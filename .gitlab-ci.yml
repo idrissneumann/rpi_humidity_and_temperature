@@ -6,7 +6,6 @@ mirror:
   script:
     - setsid ./ci/mirror.sh
   only:
-    - /^(master.*)$/
+    - /^(main.*)$/
   tags:
     - veggieoss
-
