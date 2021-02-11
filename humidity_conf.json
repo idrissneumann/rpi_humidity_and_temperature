@@ -1,0 +1,8 @@
+{
+  "elastic_host": "changeit",
+  "elastic_port": 9200,
+  "elastic_scheme": "http",
+  "wait_time": 60,
+  "pin": 4,
+  "index_prefix": "humidity_and_temperature"
+}
