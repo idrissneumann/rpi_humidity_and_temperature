@@ -1,8 +1,9 @@
 {
-  "elastic_host": "changeit",
-  "elastic_port": 9200,
+  "elastic_hosts": ["127.0.0.1"],
+  "elastic_port": "9200",
   "elastic_scheme": "http",
   "wait_time": 60,
   "pin": 4,
+  "log_level": "info",
   "index_prefix": "humidity_and_temperature"
 }
