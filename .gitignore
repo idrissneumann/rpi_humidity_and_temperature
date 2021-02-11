@@ -71,6 +71,3 @@ hs_err_pid*.log
 
 *.pem
 
-*.patch
-*.merge
-
