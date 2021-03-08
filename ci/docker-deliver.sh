@@ -13,13 +13,13 @@ tag_and_push() {
   docker push "comworkio/${2}:latest"
 }
 
-cd "${REPO_PATH}" && git pull origin master || : 
+cd "${REPO_PATH}" && git pull origin main || : 
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_EMAIL}"
 sha="$(git rev-parse --short HEAD)"
 echo '{"version":"'"${VERSION}"'", "sha":"'"${sha}"'", "arch":"'"${ARCH}"'"}' > manifest.json
 
-COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose-build-${ARCH}.yml build --no-cache "${IMAGE}"
+COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build --no-cache "${IMAGE}"
 
 echo "${DOCKER_ACCESS_TOKEN}" | docker login --username comworkio --password-stdin
 
