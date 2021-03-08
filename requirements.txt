@@ -2,4 +2,3 @@ Adafruit_DHT
 elasticsearch
 requests
 Pyserial
-
