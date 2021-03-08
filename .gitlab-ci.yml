@@ -1,5 +1,6 @@
 stages:
   - mirror
+  - publish
 
 mirror:
   stage: mirror
@@ -10,7 +11,7 @@ mirror:
   tags:
     - veggieoss
 
-humidity-and-temperature:
+build-img:
   stage: publish
   script:
     - setsid ./ci/docker-deliver.sh "humidity-and-temperature" "1.0"
@@ -18,8 +19,7 @@ humidity-and-temperature:
     refs:
       - /^(master.*)$/
     changes:
-      - humidity_and_temperature.py
-      - humidity_and_temperature_conf.json
+      - src/*
       - Dockerfile
       - docker-compose-build-arm.yml
       - ci/docker-deliver.sh
