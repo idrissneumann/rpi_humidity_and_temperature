@@ -2,21 +2,15 @@
 
 BASE_DIR="$(dirname $0)"
 REPO_PATH="${BASE_DIR}/.."
-IMAGE="${1}"
+IMAGE="veggiepi-${1}"
 VERSION="${2}"
-ARCH="${3}"
+ARCH="arm"
 
 tag_and_push() {
   docker tag "comworkio/${2}:latest" "comworkio/${2}:latest-${3}" 
   docker tag "comworkio/${2}:latest" "comworkio/${2}:${1}-${3}"
   docker push "comworkio/${2}:${1}-${3}"
-  docker push "comworkio/${2}:latest-${3}"
-
-  if [[ $3 == "x86" ]]; then
-    docker tag "comworkio/${2}:latest" "comworkio/${2}:${1}"
-    docker push "comworkio/${2}:${1}"
-    docker push "comworkio/${2}:latest"
-  fi
+  docker push "comworkio/${2}:latest"
 }
 
 cd "${REPO_PATH}" && git pull origin master || : 

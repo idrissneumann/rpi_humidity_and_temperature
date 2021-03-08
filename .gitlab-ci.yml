@@ -9,3 +9,19 @@ mirror:
     - /^(main.*)$/
   tags:
     - veggieoss
+
+humidity-and-temperature:
+  stage: publish
+  script:
+    - setsid ./ci/docker-deliver.sh "humidity-and-temperature" "1.0"
+  only:
+    refs:
+      - /^(master.*)$/
+    changes:
+      - humidity_and_temperature.py
+      - humidity_and_temperature_conf.json
+      - Dockerfile
+      - docker-compose-build-arm.yml
+      - ci/docker-deliver.sh
+  tags:
+    - buildarm
