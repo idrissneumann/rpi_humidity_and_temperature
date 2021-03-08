@@ -17,11 +17,12 @@ build-img:
     - setsid ./ci/docker-deliver.sh "humidity-and-temperature" "1.0"
   only:
     refs:
-      - /^(master.*)$/
+      - /^(main.*)$/
     changes:
       - src/*
       - Dockerfile
       - docker-compose-build-arm.yml
       - ci/docker-deliver.sh
+      - .gitlab-ci.yml
   tags:
     - buildarm
