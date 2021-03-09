@@ -6,6 +6,10 @@ The elasticstack images used are available [here](https://gitlab.comwork.io/oss/
 
 This project is used by the [veggiepi.com](https://www.veggiepi.com) project.
 
+## Table of content
+
+[[_TOC_]]
+
 ## Git repository
 
 * Main repo: https://gitlab.comwork.io/oss/veggiepi/humidity_and_temperature
@@ -52,3 +56,11 @@ $ docker-compose up -d kib01
 ```
 
 Then wait until the UI of Kibana is loading on http:127.0.0.1:5601 (you can change the ip by your local network ip if you want to load the Kibana UI from another computer and you can check the logs with `docker logs veggie_kib01`).
+
+### Run the service
+
+```shell
+$ docker-compose up -d vhat01
+```
+
+Then you can check the logs with `docker logs veggie_vhat01` and check the data on Kibana!

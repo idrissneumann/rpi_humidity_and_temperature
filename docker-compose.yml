@@ -1,8 +1,9 @@
 version: "3.3"
 
 services:
-  veggiepi-humidity-and-temperature:
+  vhat01:
     image: comworkio/veggiepi-humidity-and-temperature:latest
+    container_name: veggie_vhat01
     environment:
       - VEGGIEPI_hosts=veggie_es01
       - VEGGIEPI_wait_time=60
