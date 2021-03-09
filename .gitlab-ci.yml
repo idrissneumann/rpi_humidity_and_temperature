@@ -20,6 +20,8 @@ build-img:
       - /^(main.*)$/
     changes:
       - src/*
+      - src/sensors_pack/*
+      - src/sensors_pack/humidity_pack/*
       - Dockerfile
       - docker-compose-build-arm.yml
       - ci/docker-deliver.sh
