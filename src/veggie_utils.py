@@ -17,12 +17,12 @@ def override_conf_from_env_array( conf, key ):
         else:
             conf[key] = os.environ[env_key].split(",")
 
-def check_log_level ( log_level ):
-    if LOG_LEVEL == "debug" or LOG_LEVEL == "DEBUG":
+def check_log_level ( conf_log_level, log_level ):
+    if conf_log_level == "debug" or conf_log_level == "DEBUG":
         return True
     else:
         return log_level != "debug" and log_level != "DEBUG"
 
-def log_msg ( log_level, message ):
-    if check_log_level(log_level):
+def log_msg ( conf_log_level, log_level, message ):
+    if check_log_level(conf_log_level, log_level):
         print ("[{}] {}".format(log_level, message))

@@ -33,7 +33,7 @@ INDEX_PREFIX = conf['index_prefix']
 WAIT_TIME = conf['wait_time']
 DATA_PIN = conf['pin']
 
-es = es_connect(ES_SCHEME, ES_HOSTS, ES_PORT, ES_USER, ES_PASS, ES_SUBPATH)
+es = es_connect(LOG_LEVEL, ES_SCHEME, ES_HOSTS, ES_PORT, ES_USER, ES_PASS, ES_SUBPATH)
 
 while True:
     index_name = "{}_{}".format(INDEX_PREFIX, date.today().strftime("%Y%m%d"));
