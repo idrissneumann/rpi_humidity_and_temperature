@@ -55,7 +55,7 @@ $ curl localhost:9200
 $ docker-compose up -d kib01
 ```
 
-Then wait until the UI of Kibana is loading on http:127.0.0.1:5601 (you can change the ip by your local network ip if you want to load the Kibana UI from another computer and you can check the logs with `docker logs veggie_kib01`).
+Then wait until the UI of Kibana is loading on http://127.0.0.1:5601 (you can change the ip by your local network ip if you want to load the Kibana UI from another computer and you can check the logs with `docker logs veggie_kib01`).
 
 ### Run the service
 
