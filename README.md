@@ -1,6 +1,6 @@
 # Humidity and temperature sensor
 
-This project aims to collect the data from a humidity and temperature sensor plugged in a raspberrypi and index those data into Elasticsearch and make some alerts with elastalert.
+This project aims to collect the data from a humidity and temperature sensor (DHT22) directly plugged on the GPIO input of a raspberrypi that will index those data into a local Elasticsearch in order to be able to monitor the data using a local instance of Kibana.
 
 The elasticstack images used are available [here](https://gitlab.comwork.io/oss/elasticstack/elasticstack-arm) in opensource too.
 
