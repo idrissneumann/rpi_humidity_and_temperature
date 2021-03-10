@@ -7,9 +7,7 @@ VERSION="${2}"
 ARCH="arm"
 
 tag_and_push() {
-  docker tag "comworkio/${2}:latest" "comworkio/${2}:latest-${3}" 
-  docker tag "comworkio/${2}:latest" "comworkio/${2}:${1}-${3}"
-  docker push "comworkio/${2}:${1}-${3}"
+  docker tag "comworkio/${2}:latest" "comworkio/${2}:${1}"
   docker push "comworkio/${2}:latest"
   docker push "comworkio/${2}:${1}"
 }
