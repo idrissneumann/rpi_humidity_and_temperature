@@ -9,18 +9,25 @@ This project is used by the [veggiepi.com](https://www.veggiepi.com) project.
 ## Table of content
 
 [[_TOC_]]
-
 ## Git repository
 
 * Main repo: https://gitlab.comwork.io/oss/veggiepi/humidity_and_temperature
 * Github mirror backup: https://github.com/idrissneumann/rpi_humidity_and_temperature
 * Gitlab mirror backup: https://gitlab.com/ineumann/rpi_humidity_and_temperature
 
-## Run locally using docker-compose
+## Getting started
+
+### Setup
+
+This is the Raspberry Pi setup used by the maintener in order to build the ARM image (which is available on docker-hub) and to run it with a minimal ElasticStack which is also built for ARM (see [this repo](https://gitlab.comwork.io/oss/elasticstack/elasticstack-arm)).
+
+![setup](img/setup.jpg)
+
+### Run locally using docker-compose
 
 Pick the [docker-compose.yml](./docker-compose.yml) file and follow the steps below.
 
-### Run elasticsearch
+#### Run elasticsearch
 
 ```shell
 $ docker-compose up -d es01
@@ -49,7 +56,7 @@ $ curl localhost:9200
 }
 ```
 
-### Run Kibana
+#### Run Kibana
 
 ```shell
 $ docker-compose up -d kib01
@@ -57,10 +64,14 @@ $ docker-compose up -d kib01
 
 Then wait until the UI of Kibana is loading on http://127.0.0.1:5601 (you can change the ip by your local network ip if you want to load the Kibana UI from another computer and you can check the logs with `docker logs veggie_kib01`).
 
-### Run the service
+#### Run the service
 
 ```shell
 $ docker-compose up -d vhat01
 ```
 
 Then you can check the logs with `docker logs veggie_vhat01` and check the data on Kibana!
+
+You should be able to watch that kind of data:
+
+![kibana](img/kibana.jpg)
