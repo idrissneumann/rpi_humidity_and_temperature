@@ -89,7 +89,7 @@ Here the available environment variable you can override (if you want to choose 
 
 * `VEGGIEPI_elastic_scheme`: the http scheme of your Elasticsearch cluster/instance (`http` or `https`)
 * `VEGGIEPI_elastic_hosts`: list of Elasticsearch hostsname (`yourinstance.k8s.yourdomain.io` for example for an instance hosted on the cloud)
-* `VEGGIEPI_elastic_port`: the http(s) port (generally 443 for an instance exposed on the cloud or 9200 for a local instance)
+* `VEGGIEPI_elastic_port`: the http(s) port (generally `443` for an instance exposed with https on the cloud or 9200 for a local instance)
 * `VEGGIEPI_elastic_subpath` (optional): if the Elasticsearch API is exposed on a particular subpath (`api` for example for a `/api` exposition of the endpoints)
 * `VEGGIEPI_elastic_username` (optional): the username of your Elasticsearch cluster/instance if xpack authentication is enabled
 * `VEGGIEPI_elastic_password` (optional): the password of your Elasticsearch cluster/instance if xpack authentication is enabled
