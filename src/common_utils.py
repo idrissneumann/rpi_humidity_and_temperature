@@ -51,7 +51,10 @@ def cast_boolean(var):
 def cast_int(var):
     if is_not_numeric(var):
         return None
-    return int(var)
+    elif (isinstance(var, int)):
+        return var
+    else:
+        return int(var)
 
 def cast_array(var):
     if not isinstance(var, list) and is_not_empty(var):
