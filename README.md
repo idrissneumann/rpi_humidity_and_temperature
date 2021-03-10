@@ -87,16 +87,16 @@ You should be able to watch that kind of data:
 
 Here the available environment variable you can override (if you want to choose an #Elasticsearch cluster on the cloud instead the local ARM-based containers for example):
 
-* `VEGGIEPI_log_level`: log level (`info`, `debug`, `warn`, `error`)
 * `VEGGIEPI_elastic_scheme`: the http scheme of your Elasticsearch cluster/instance (`http` or `https`)
 * `VEGGIEPI_elastic_hosts`: list of Elasticsearch hostsname (`yourinstance.k8s.yourdomain.io` for example for an instance hosted on the cloud)
 * `VEGGIEPI_elastic_port`: the http(s) port (generally 443 for an instance exposed on the cloud or 9200 for a local instance)
-* `VEGGIEPI_elastic_subpath`: if the Elasticsearch API is exposed on a particular subpath (`api` for example for a `/api` exposition of the endpoints)
+* `VEGGIEPI_elastic_subpath` (optional): if the Elasticsearch API is exposed on a particular subpath (`api` for example for a `/api` exposition of the endpoints)
 * `VEGGIEPI_elastic_username` (optional): the username of your Elasticsearch cluster/instance if xpack authentication is enabled
 * `VEGGIEPI_elastic_password` (optional): the password of your Elasticsearch cluster/instance if xpack authentication is enabled
 * `VEGGIEPI_elastic_index_prefix` (optional): the indexes prefix (by default it will be `humidity_and_temperature`)
 * `VEGGIEPI_elastic_wait_time` (optional): wait time in seconds each time the sensor is read (by default it's 60 seconds)
 * `VEGGIEPI_elastic_pin` (optional): the GPIO data pin (by default it's the number 4)
+* `VEGGIEPI_log_level` (optional): log level (`info`, `debug`, `warn`, `error`). Default is `info`
 
 If you want to use an Elasticsearch cluster on the cloud, you can override those environment variables in a `.env` file on the same directory of your `docker-compose.yml` file then just have a simple `docker-compose` file like that:
 
