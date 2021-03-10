@@ -31,7 +31,7 @@ ES_PASS = conf['elastic_password']
 ES_SCHEME = conf['elastic_scheme']
 INDEX_PREFIX = conf['index_prefix']
 WAIT_TIME = cast_int(conf['wait_time'])
-DATA_PIN = conf['pin']
+DATA_PIN = cast_int(conf['pin'])
 
 es = es_connect(LOG_LEVEL, ES_SCHEME, ES_HOSTS, ES_PORT, ES_USER, ES_PASS, ES_SUBPATH)
 
