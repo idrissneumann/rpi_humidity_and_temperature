@@ -9,11 +9,18 @@ This project is used by the [veggiepi.com](https://www.veggiepi.com) project.
 ## Table of content
 
 [[_TOC_]]
+
 ## Git repository
 
 * Main repo: https://gitlab.comwork.io/oss/veggiepi/humidity_and_temperature
 * Github mirror backup: https://github.com/idrissneumann/rpi_humidity_and_temperature
 * Gitlab mirror backup: https://gitlab.com/ineumann/rpi_humidity_and_temperature
+
+## Docker image
+
+The docker image of this sensor module is available here: https://hub.docker.com/repository/docker/comworkio/veggiepi-humidity-and-temperature
+
+There is a ready-to-use [docker-compose.yml](./docker-compose.yml) file available on this git repo.
 
 ## Getting started
 
