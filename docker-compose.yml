@@ -4,8 +4,9 @@ services:
   vhat01:
     image: comworkio/veggiepi-humidity-and-temperature:latest
     container_name: veggie_vhat01
+    privileged: true
     environment:
-      - VEGGIEPI_hosts=veggie_es01
+      - VEGGIEPI_elastic_hosts=veggie_es01
       - VEGGIEPI_wait_time=60
       - VEGGIEPI_index_prefix=humidity_and_temperature
     networks:

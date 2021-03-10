@@ -41,7 +41,7 @@ while True:
 
     humid, temp = dht22.read_humidity_and_temperature(DATA_PIN)
     if humid is not None and temp is not None:
-        log_msg("info", "Temperature={0:0.1f}*C Humidity={1:0.1f}%".format(temp, humid))
+        log_msg(LOG_LEVEL, "info", "Temperature={0:0.1f}*C Humidity={1:0.1f}%".format(temp, humid))
         timestamp = datetime.now()
         es.index(index=index_name, id=timestamp, body={"temperature": temp, "humidity": humid, "timestamp": timestamp})
     else:
