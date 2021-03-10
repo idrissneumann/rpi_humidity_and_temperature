@@ -45,5 +45,5 @@ while True:
         timestamp = datetime.now()
         es.index(index=index_name, id=timestamp, body={"temperature": temp, "humidity": humid, "timestamp": timestamp})
     else:
-        log_msg("error", "Failed to retrieve values...")
+        log_msg(LOG_LEVEL, "error", "Failed to retrieve values...")
     sleep(WAIT_TIME)
