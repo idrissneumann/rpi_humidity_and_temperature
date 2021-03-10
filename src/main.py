@@ -25,7 +25,7 @@ override_conf_from_env(conf, 'index_prefix')
 LOG_LEVEL = conf['log_level']
 ES_HOSTS = conf['elastic_hosts']
 ES_SUBPATH = conf['elastic_subpath']
-ES_PORT = int(conf['elastic_port'])
+ES_PORT = cast_int(conf['elastic_port'])
 ES_USER = conf['elastic_username']
 ES_PASS = conf['elastic_password']
 ES_SCHEME = conf['elastic_scheme']
