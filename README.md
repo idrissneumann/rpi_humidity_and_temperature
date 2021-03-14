@@ -105,7 +105,7 @@ version: "3.3"
 
 services:
   vhat01:
-    image: comworkio/veggiepi-humidity-and-temperature:latest
+    image: comworkio/veggiepi-humidity-and-temperature:1.1
     container_name: veggie_vhat01
     privileged: true
 ```
