@@ -15,6 +15,7 @@ This project is used by the [veggiepi](https://veggiepi.comwork.io) project.
 * Main repo: https://gitlab.comwork.io/oss/veggiepi/humidity_and_temperature
 * Github mirror backup: https://github.com/idrissneumann/rpi_humidity_and_temperature
 * Gitlab mirror backup: https://gitlab.com/ineumann/rpi_humidity_and_temperature
+* Bitbucket mirror backup: https://bitbucket.org/idrissneumann/humidity_and_temperature
 
 ## Docker image
 
